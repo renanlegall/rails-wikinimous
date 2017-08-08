@@ -1,0 +1,6 @@
+<h1>Personnage <%= @article.title %></h1>
+
+<p>Ma quote : <%= @article.content %></p>
+<%= link_to 'Editer mon article', edit_article_path(@article) %>
+
+<%= link_to 'Retour a la liste', articles_path %>

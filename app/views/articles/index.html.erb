@@ -1,0 +1,15 @@
+<h1>Liste des articles</h1>
+
+<%= link_to 'Ajouter un article', new_article_path %>
+
+<% @articles.each do |article| %>
+<div>
+  <p><%= article.title %></p>
+  <p><%= article.content %></p>
+  <%= link_to 'Allez voir l\'article', article_path(article) %>
+  <%= link_to 'Supprimer l\'article', article_path(article), method: :delete, data: {confirm: "Are you sure ?"} %>
+</div>
+
+<% end %>
+
+
